@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAJAS */
+.box {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    height: 80px;
+}
+
+/* CELULAR*/
+.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.mobile .fila {
+    display: flex;
+}
+
+.mobile .c,
+.mobile .d {
+    flex: 1;
+}
+
+.mobile .b {
+    height: 120px;
+}
+
+.mobile .e {
+    height: 60px;
+}
+
+/* DESKTOP oculto en móvil */
+.desktop {
+    display: none;
+}
+
+/* ------------------- */
+/* TABLET Y COMPU */
+/* ------------------- */
+@media (min-width: 768px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+    }
+
+    .fila {
+        display: flex;
+        width: 100%;
+    }
+
+    .top {
+        height: 150px;
+    }
+
+    .bottom {
+        height: 100px;
+    }
+
+    /* PROPORCIONES */
+    .top .a {
+        flex: 1;
+    }
+
+    .top .b {
+        flex: 1;
+    }
+
+    .bottom .c,
+    .bottom .d,
+    .bottom .e {
+        flex: 1;
+    }
+}
