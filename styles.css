@@ -5,52 +5,23 @@
     font-family: Arial, sans-serif;
 }
 
-/* PANTALLA COMPLETA */
-body {
-    height: 100vh;
-}
-
-/* CONTENEDOR TIPO NAVEGADOR */
-.browser {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #999;
-}
-
-/* BARRA SUPERIOR */
-.top-bar {
-    background: #e5e5e5;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-/* BARRA URL */
-.url-bar {
-    background: #f2f2f2;
-    padding: 5px 10px;
-    font-size: 13px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* CONTENIDO */
-.contenido {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* TITULO */
+/* HEADER */
 .header {
-    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
     font-weight: bold;
+    font-size: 1.5rem;
+    background: #dcdcdc; /* color como en mockup */
     border-bottom: 2px solid black;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR */
 .contenedor {
-    flex: 1;
+    height: calc(100vh - 60px);
     display: flex;
+    flex-direction: column;
 }
 
 /* CAJAS */
@@ -65,25 +36,24 @@ body {
 /* ---------------- */
 /* MOBILE */
 /* ---------------- */
-.contenedor {
-    flex-direction: column;
-}
 
 .a {
     display: none;
 }
 
-.columna-derecha {
+.derecha {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    height: 100%;
 }
 
+/* B ocupa 2 filas */
 .b {
     flex: 2;
 }
 
-.fila {
+/* fila C D */
+.fila-inferior {
     display: flex;
     flex: 1;
 }
@@ -92,6 +62,7 @@ body {
     flex: 1;
 }
 
+/* E abajo completo */
 .e {
     flex: 1;
 }
@@ -105,24 +76,34 @@ body {
         flex-direction: row;
     }
 
+    /* A izquierda (3 partes) */
     .a {
         display: flex;
         flex: 1;
     }
 
-    .columna-derecha {
+    /* derecha ocupa igual que A */
+    .derecha {
         flex: 1;
     }
 
+    /* B ocupa 3 partes arriba */
     .b {
+        flex: 3;
+    }
+
+    /* fila inferior */
+    .fila-inferior {
         flex: 1;
     }
 
-    .fila {
+    /* C ocupa toda la izquierda abajo */
+    .c {
         flex: 1;
     }
 
-    .c, .d, .e {
+    /* D y E comparten derecha */
+    .d, .e {
         flex: 1;
     }
 }
