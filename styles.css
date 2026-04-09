@@ -40,10 +40,10 @@
 }
 
 /* ========================= */
-/* 📱 MOBILE (AHORA SÍ BIEN) */
+/* MOBILE */
 /* ========================= */
+ 
 
-/* ocultamos A SOLO visualmente */
 .a {
     display: none;
 }
@@ -86,7 +86,7 @@
 }
 
 /* ========================= */
-/* 💻 DESKTOP (SE MANTIENE) */
+/* DESKTOP */
 /* ========================= */
 @media (min-width: 768px) {
 
